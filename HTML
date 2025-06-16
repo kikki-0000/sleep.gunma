@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朝の応援団</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>朝の応援団</h1>
+        </header>
+
+        <main>
+            <section id="today-sleep">
+                <h2>今日の睡眠時間</h2>
+                <p class="sleep-time">--:--</p> <button id="more-info">もっと見る</button>
+                <div class="auth-buttons">
+                    <button id="fitbit-auth-button">Fitbit連携</button>
+                    <button id="google-auth-button">Google連携</button>
+                    <button id="sync-calendar-button">カレンダー同期</button>
+                </div>
+            </section>
+
+            <section id="alarms">
+                <h2>今設定されているアラーム</h2>
+                <div id="alarm-list">
+                    </div>
+                <button id="set-alarm">アラーム設定</button>
+            </section>
+        </main>
+
+        <div id="alarm-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>アラーム設定</h2>
+                <div class="time-picker">
+                    <input type="number" id="hour" placeholder="09" min="0" max="23">
+                    :
+                    <input type="number" id="minute" placeholder="00" min="0" max="59">
+                </div>
+                <div class="sound-options">
+                    <h3>サウンド</h3>
+                    <div>
+                        <input type="checkbox" id="sound-a-nonrem" name="sound-a-nonrem" data-sound-id="A">
+                        <label for="sound-a-nonrem">A (ノンレム)</label>
+                        <input type="checkbox" id="sound-a-rem" name="sound-a-rem" data-sound-id="A">
+                        <label for="sound-a-rem">A (レム)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sound-b-nonrem" name="sound-b-nonrem" data-sound-id="B">
+                        <label for="sound-b-nonrem">B (ノンレム)</label>
+                        <input type="checkbox" id="sound-b-rem" name="sound-b-rem" data-sound-id="B">
+                        <label for="sound-b-rem">B (レム)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sound-c-nonrem" name="sound-c-nonrem" data-sound-id="C">
+                        <label for="sound-c-nonrem">C (ノンレム)</label>
+                        <input type="checkbox" id="sound-c-rem" name="sound-c-rem" data-sound-id="C">
+                        <label for="sound-c-rem">C (レム)</label>
+                    </div>
+                </div>
+                <button id="save-alarm">設定</button>
+            </div>
+        </div>
+
+        <div id="sleep-history-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>睡眠時間一覧</h2>
+                <section id="weekly-sleep">
+                    <h3>1週間の睡眠時間</h3>
+                    <canvas id="weekly-sleep-chart"></canvas>
+                </section>
+                <section id="monthly-sleep">
+                    <h3>1ヶ月の睡眠時間</h3>
+                    <canvas id="monthly-sleep-chart"></canvas>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="App.js"></script>
+</body>
+
+</html>
