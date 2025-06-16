@@ -1,0 +1,145 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADD8E6; /* Light Blue */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f0f8ff; /* Alice Blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#today-sleep {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sleep-time {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 15px; /* ボタンとの間にスペース */
+}
+
+#alarms {
+    margin-bottom: 20px;
+}
+
+#alarm-list {
+    margin-bottom: 10px;
+}
+
+.alarm-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.alarm-time {
+    font-size: 1.5em;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px; /* ボタン間のスペースを調整 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.time-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.time-picker input {
+    width: 50px;
+    padding: 5px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.sound-options {
+    margin-bottom: 20px;
+}
+
+.sound-options div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.sound-options label {
+    margin-left: 5px;
+}
+
+#weekly-sleep-chart,
+#monthly-sleep-chart {
+    width: 100%;
+    height: 300px;
+}
+
+/* 追加: 認証ボタンのコンテナスタイル */
+.auth-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
