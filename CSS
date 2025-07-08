@@ -143,3 +143,33 @@ button:hover {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/* スプラッシュスクリーン用スタイル */
+#splash-screen {
+    position: fixed; /* 画面全体を覆う */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ADD8E6; /* bodyと同じライトブルー */
+    display: flex; /* 中央寄せのため */
+    justify-content: center; /* 水平中央 */
+    align-items: center; /* 垂直中央 */
+    z-index: 9999; /* 最前面に表示 */
+    color: #333; /* テキスト色 */
+    font-size: 3em; /* 大きなフォントサイズ */
+    font-weight: bold; /* 太字 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 影を付けて少し立体的に */
+    transition: opacity 0.5s ease-out; /* フェードアウトのためのトランジション */
+}
+
+/* メインコンテンツ初期非表示用スタイル */
+#main-content.hidden {
+    display: none; /* 初期状態では非表示 */
+}
+
+/* メインコンテンツ表示時用スタイル（フェードインする場合など） */
+#main-content {
+    opacity: 1; /* 初期は完全に不透明 */
+    transition: opacity 0.5s ease-in; /* フェードインのためのトランジション */
+}
